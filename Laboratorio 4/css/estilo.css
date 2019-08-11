@@ -1,0 +1,126 @@
+/*se utiliza para poder anclar otros estilos css dentro de la carpeta css*/
+@import url(menu.css);
+@import url(peliculas.css);
+@import url(info.css);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*esto es para que todo este dentro de un modelo de caja*/
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	background: #48829e;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; /*para que este siempre delante de los elementos*/
+}
+
+.contenedor {
+	width: 98%
+	margin: auto;
+}
+
+h1{
+	float: left;
+}
+
+header .contenedor {
+	display: table;
+}
+
+/*secccion contenido principal*/
+
+#contenido {
+	top: 50px;
+	position: relative;
+	border: 1 px solid #000;
+	background: #7ddcd1;
+	padding: 10px;
+	margin: 10px;
+}
+
+#contenido p{
+	width: 100%;
+	text-align: justify;
+}
+
+#contenido img {
+	/*display: none;*/
+	width: 100%;
+	height: 150px;
+	flex-wrap: wrap;
+}
+
+
+
+/*haciendo responsivo el contenido principal*/
+@media (min-width: 768px){
+	#contenido p{
+		width: 60%;
+	}
+
+	#contenido img {
+		width: 30%;
+		display: flex;
+		position: absolute;
+		top: 35px;
+		left: 65%;
+	}
+}
+
+@media(min-width: 1024px){
+	#contenido img {
+		width: 30%;
+		display: flex;
+		position: absolute;
+		top: 2.5px;
+		left: 65%;
+	}
+}
+
+/*footer*/
+
+footer .contenedor {
+	display: flex;
+	flex-wrap: wrap; /*para que si no cabe lo pase para abajo*/
+	justify-content: center;
+	padding-bottom: 25px;
+	background: #48829e;
+	padding: 10px;
+	margin: 10px;
+}
+
+.copy {   /*para poner simbolo C*/
+	font-size: 20px;
+}
+
+.sociales {  /*para los iconos de redes sociales*/
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+}
+
+.sociales a {
+	color: #333;
+	text-decoration: none; /*quita la decoración de un enlace*/
+}
+
+@media(min-width: 768px){ /*cuando la pantalla este a un minimo de 768px*/
+/*los iconos de las redes sociales cambian su ancho*/
+	.sociales{
+		width: auto; /*se vuelven automaticos*/
+	}
+
+	footer .contenedor {
+		justify-content: space-between; /*que el contenido deja un espacio en medio*/
+	}
+}

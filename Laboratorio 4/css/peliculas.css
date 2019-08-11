@@ -1,0 +1,25 @@
+#peliculas h3, h4{
+	text-align: center;
+}
+
+
+#peliculas .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;  /*los elementos que no caben se pongan debajo del otro */
+	background: #58bdcd;
+	padding: 10px;
+	margin: 10px;
+
+}
+
+#peliculas article { /*atributos para el article dentro de blog*/
+	margin: 15px;
+}
+
+#peliculas img { /*atributos para img dentro de blog*/
+	width: 100%;
+	height: 180px;
+	border-radius: 50%;  /*para redondear esquinas*/
+	border: 7px solid #338e99;
+}

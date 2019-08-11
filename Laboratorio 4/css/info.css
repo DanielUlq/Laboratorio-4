@@ -1,0 +1,51 @@
+#info h3{
+	text-align: center;
+}
+
+#info {
+	background: #58bdcd;
+	padding: 10px;
+	margin: 10px;
+}
+
+#info .contenedor{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;  /*los elementos que no caben se pongan debajo del otro */
+}
+
+#info .info1 {
+		width: 100%;
+		background: #418daf;
+		text-align: justify;
+}
+
+#info .info2 {
+		width: 100%;
+		background: #3a7b99;
+		text-align: justify;
+}
+
+#info article { /*atributos para el article dentro de blog*/
+	margin: 15px;
+}
+
+
+/*haciendo responsivo la informacion*/
+@media(min-width: 1024px){
+	#info .info1 {
+		width: 45%;
+		background: #418daf;
+		float: left;
+		text-align: justify;
+	}
+
+	#info .info2 {
+		width: 45%;
+		background: #3a7b99;
+		float: right;
+		text-align: justify;
+	}
+}
+
